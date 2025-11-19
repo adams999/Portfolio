@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import type { ContactInfoItem } from "@/types/contact";
 
 export const contactInfo: ContactInfoItem[] = [
@@ -8,6 +8,14 @@ export const contactInfo: ContactInfoItem[] = [
     value: "adamspurry@gmail.com",
     href: "mailto:adamspurry@gmail.com",
     icon: Mail,
+  },
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    value: "+58 416 0769179",
+    href: "https://wa.me/584160769179",
+    icon: Phone,
+    external: true,
   },
   {
     id: "github",

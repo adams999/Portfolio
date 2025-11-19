@@ -27,7 +27,7 @@ export function ContactInfo({ contactInfo, className }: ContactInfoProps) {
             <div key={info.id} className="flex items-center gap-3">
               <Icon className="h-5 w-5 text-blue-400" />
               <div>
-                <p className="text-sm text-gray-500">{t(info.id as 'email' | 'github' | 'linkedin')}</p>
+                <p className="text-sm text-gray-500">{t(info.id as 'email' | 'whatsapp' | 'github' | 'linkedin')}</p>
                 <Link
                   href={info.href}
                   {...linkProps}
