@@ -1,0 +1,88 @@
+import type { Project } from "@/types/projects";
+
+export const projects: Project[] = [
+  {
+    id: "simustream",
+    title: "SimuStream - Video Platform Backend",
+    description: "Production-grade video streaming platform with MongoDB, Express, Socket.io, Stripe payments, AWS S3 storage, player analytics, email notifications, referral system, and cron-based automation. Complete enterprise solution.",
+    tags: ["Node.js", "MongoDB", "Stripe", "AWS S3", "Socket.io", "Redis"],
+    link: "https://github.com/adams999/Backend-with-shopify-and-mongo",
+  },
+  {
+    id: "nextjs-strapi",
+    title: "Next.js 16 + Strapi CMS",
+    description: "Full-stack application with Next.js 16 and Strapi 5, featuring JWT authentication, dynamic content management, protected routes, and server-side caching. Built with modern App Router architecture.",
+    tags: ["Next.js", "TypeScript", "Strapi", "React", "Tailwind"],
+    link: "https://github.com/adams999/Project-with-react-16-and-strapi",
+  },
+  {
+    id: "shopify-integration",
+    title: "Shopify Integration API",
+    description: "Backend middleware connecting Shopify and Simustream platforms. Features automated webhook synchronization for products, OAuth authentication, Stripe integration, and HTTPS with SSL certificates.",
+    tags: ["Node.js", "Express", "Shopify API", "Stripe", "Webhooks"],
+    link: "https://github.com/adams999/shopify-project-api",
+  },
+  {
+    id: "video-player-monorepo",
+    title: "Video Player Monorepo",
+    description: "Modular monorepo with multiple video player implementations using different architectures. Includes webpack-based player, shared component library, and lightweight jQuery player for various deployment scenarios.",
+    tags: ["JavaScript", "Webpack", "jQuery", "Monorepo", "HTML5"],
+    link: "https://github.com/adams999/Player-of-videos",
+  },
+  {
+    id: "fastapi-supabase",
+    title: "FastAPI + Supabase REST API",
+    description: "Modern REST API with MVC architecture and 79% test coverage. Features complete CRUD operations, Pydantic validation, auto-generated Swagger docs, and PostgreSQL backend with Supabase.",
+    tags: ["Python", "FastAPI", "Supabase", "PostgreSQL", "Pytest"],
+    link: "https://github.com/adams999/Pyton-API-FastAPI-Supabase",
+  },
+  {
+    id: "angular-enterprise",
+    title: "Angular Enterprise Architecture",
+    description: "Scalable Angular 16 application demonstrating modular architecture with lazy loading, strict TypeScript configuration, comprehensive testing setup with Jasmine/Karma, and production-ready optimization.",
+    tags: ["Angular", "TypeScript", "RxJS", "SCSS", "Jasmine"],
+    link: "https://github.com/adams999/Project-with-architecture-NX",
+  },
+  {
+    id: "mcp-ai-email",
+    title: "MCP AI Email Integration",
+    description: "Model Context Protocol tool that bridges AI systems with email functionality, enabling intelligent email automation based on business logic. Built with TypeScript for seamless AI integration.",
+    tags: ["TypeScript", "MCP", "AI", "Node.js"],
+    link: "https://github.com/adams999/MCP-AI-to-send-emails",
+  },
+  {
+    id: "eslint-config",
+    title: "ESLint Config Package",
+    description: "Enterprise-grade ESLint configuration package published to npm for Strut Software and Rithm Software projects. Features modular configs for JavaScript, TypeScript, Angular, RxJS with composable inheritance.",
+    tags: ["ESLint", "JavaScript", "TypeScript", "npm", "DevOps"],
+    link: "https://github.com/adams999/eslint-config",
+  },
+  {
+    id: "php-rest-api",
+    title: "PHP REST API with MySQL",
+    description: "Professional REST API built with PHP 8 following MVC pattern. Features HTTP request logging, multilingual error handling, standardized JSON responses, and database-driven configuration.",
+    tags: ["PHP", "MySQL", "MVC", "REST API"],
+    link: "https://github.com/adams999/API_REST_PHP_MYSQL",
+  },
+  {
+    id: "ils-travel-insurance",
+    title: "ILS Travel Insurance Mobile App",
+    description: "Master mobile application for travel insurance management built with Ionic 6 and Angular 10. Features multi-client access, unified quoting system, real-time price calculations, SMS/email notifications, and multi-language support (ES/EN/PT). Production APK with native Cordova plugins.",
+    tags: ["Ionic", "Angular", "TypeScript", "Cordova", "Mobile"],
+    link: "https://github.com/adams999/APP_ILS_IONIC_ANGULAR",
+  },
+  {
+    id: "travelkit-insurance",
+    title: "TravelKit Insurance Mobile App",
+    description: "Cross-platform travel insurance application with Ionic and Angular. Integrates Authorize.net and PayPal payment gateways, features dynamic quote generation, payment form processing, and native mobile components. Includes internationalization and SMS notifications.",
+    tags: ["Ionic", "Angular", "PayPal", "Mobile", "Cordova"],
+    link: "https://github.com/adams999/APP_TRAVELKIT_IONIC_ANGULAR",
+  },
+  {
+    id: "voyager-insurance",
+    title: "Voyager Insurance Mobile App",
+    description: "Mobile insurance quotation platform with advanced statistical dashboards and analytics. Built with Ionic 6 and Angular 10, featuring real-time calculations, email notifications, payment processing, and comprehensive reporting tools for travel insurance management.",
+    tags: ["Ionic", "Angular", "TypeScript", "Analytics", "Mobile"],
+    link: "https://github.com/adams999/APP_VOYAGER_IONIC_ANGULAR",
+  },
+];
