@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 
-interface TopNavDescriptionProps {
+interface PresentationDescriptionProps {
   description: string;
   className?: string;
 }
 
-export function TopNavDescription({ description, className }: TopNavDescriptionProps) {
+export function PresentationDescription({ description, className }: PresentationDescriptionProps) {
   return (
     <p
       className={cn(

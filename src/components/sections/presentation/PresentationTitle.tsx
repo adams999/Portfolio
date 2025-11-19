@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
-import type { TopNavTitle as TopNavTitleType } from "@/types/topnav";
+import type { TopNavTitle as PresentationTitleType } from "@/types/topnav";
 
-interface TopNavTitleProps {
-  title: TopNavTitleType;
+interface PresentationTitleProps {
+  title: PresentationTitleType;
   className?: string;
 }
 
-export function TopNavTitle({ title, className }: TopNavTitleProps) {
+export function PresentationTitle({ title, className }: PresentationTitleProps) {
   return (
     <h1
       className={cn(

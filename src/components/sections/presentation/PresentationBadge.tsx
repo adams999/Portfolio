@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import type { TopNavBadge as TopNavBadgeType } from "@/types/topnav";
+import type { TopNavBadge as PresentationBadgeType } from "@/types/topnav";
 
-interface TopNavBadgeProps {
-  badge: TopNavBadgeType;
+interface PresentationBadgeProps {
+  badge: PresentationBadgeType;
   className?: string;
 }
 
@@ -18,7 +18,7 @@ const statusAnimationColors = {
   unavailable: "bg-red-400",
 };
 
-export function TopNavBadge({ badge, className }: TopNavBadgeProps) {
+export function PresentationBadge({ badge, className }: PresentationBadgeProps) {
   return (
     <div
       className={cn(

@@ -1,4 +1,4 @@
-import { TopNavSection } from "@/components/sections/topnav/TopNavSection";
+import { PresentationSection } from "@/components/sections/presentation/PresentationSection";
 import { AboutSection } from "@/components/sections/about/AboutSection";
 import { SkillsSection } from "@/components/sections/skills/SkillsSection";
 import { ProjectsSection } from "@/components/sections/projects/ProjectsSection";
@@ -7,8 +7,8 @@ import { ContactSection } from "@/components/sections/contact/ContactSection";
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-24">
-      {/* TopNav Section */}
-      <TopNavSection />
+      {/* Presentation Section */}
+      <PresentationSection />
 
       {/* About Section */}
       <AboutSection />

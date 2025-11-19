@@ -2,12 +2,12 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { TopNavButton } from "@/types/topnav";
 
-interface TopNavCTAProps {
+interface PresentationCTAProps {
   buttons: TopNavButton[];
   className?: string;
 }
 
-export function TopNavCTA({ buttons, className }: TopNavCTAProps) {
+export function PresentationCTA({ buttons, className }: PresentationCTAProps) {
   return (
     <div className={cn("flex flex-wrap gap-4", className)}>
       {buttons.map((button) => {
