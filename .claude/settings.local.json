@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm run lint)",
       "Bash(npx eslint:*)",
-      "Bash(npm run type-check:*)"
+      "Bash(npm run type-check:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
     ],
     "deny": [],
     "ask": []
