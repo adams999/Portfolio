@@ -17,15 +17,17 @@ export function ProjectCard({ title, description, tags, link, className }: Proje
       className
     )}>
       <div className="mb-4 flex items-start justify-between">
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <h3 className="text-xl font-semibold text-white transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-400">
+          {title}
+        </h3>
         {link && (
-          <Link 
-            href={link} 
-            target="_blank" 
+          <Link
+            href={link}
+            target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+            className="relative rounded-full transition-transform duration-300 hover:rotate-45 bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-2 text-white transition-all duration-300 hover:scale-110 hover:from-blue-500/30 hover:to-purple-500/30 hover:shadow-lg hover:shadow-blue-500/20"
           >
-            <ArrowUpRight className="h-4 w-4" />
+            <ArrowUpRight className="h-4 w-4 " />
             <span className="sr-only">View project</span>
           </Link>
         )}
