@@ -1,5 +1,6 @@
 import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/ProjectCard";
+import { AboutSection } from "@/components/AboutSection";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
@@ -48,49 +49,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <Section id="about" className="bg-white/5">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-12 text-3xl font-bold md:text-4xl">About Me</h2>
-          <div className="grid gap-12 md:grid-cols-2">
-            <div className="space-y-6 text-gray-400">
-              <p>
-                I'm <span className="text-white font-semibold">Adams J. Contreras Ramírez</span>, a Venezuelan developer with over 7 years of experience in web technologies.
-              </p>
-              <p>
-                My expertise spans both <span className="text-white">backend</span> and <span className="text-white">frontend</span> development, as well as mobile applications. I've worked as a <span className="text-white font-semibold">Team Lead</span> managing multicultural teams, always focused on results, delivery timelines, and code optimization.
-              </p>
-              <p>
-                I'm passionate about creating efficient and scalable technology solutions, prioritizing best practices and the quality of the final product.
-              </p>
-              <div className="flex gap-4 pt-4">
-                <Link
-                  href="https://github.com/adams999"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Github className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/adamsjcontreras"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="pt-4 space-y-2 text-sm text-gray-400 mb-6">
-                <p><span className="text-white font-semibold">Nationality:</span> Venezuelan</p>
-                <p><span className="text-white font-semibold">Experience:</span> +7 years</p>
-                <p><span className="text-white font-semibold">Roles:</span> Full Stack Developer, Team Lead</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <AboutSection />
 
       {/* Skills Section */}
       <Section id="skills" className="bg-white/5">

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A showcase of my work and skills",
+  title: "Portfolio Adams J. Contreras Ramírez",
+  description: "Professional web developer portfolio showcasing full-stack projects, modern web applications, and software development skills. Explore my work in React, Next.js, and web technologies.",
 };
 
 export default function RootLayout({
