@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useTranslations } from "next-intl";
 import { PresentationBadge } from "@/components/sections/presentation/PresentationBadge";
@@ -7,31 +7,32 @@ import { PresentationDescription } from "@/components/sections/presentation/Pres
 import { PresentationCTA } from "@/components/sections/presentation/PresentationCTA";
 import { PresentationImage } from "@/components/sections/presentation/PresentationImage";
 import { ArrowRight } from "lucide-react";
+import Lightning from "../lightning/Lightning";
 
 export function PresentationSection() {
-  const t = useTranslations('presentation');
+  const t = useTranslations("presentation");
 
   const badge = {
-    text: t('badge'),
-    status: 'available' as const,
+    text: t("badge"),
+    status: "available" as const,
   };
 
   const title = {
-    name: t('name'),
-    role: t('role'),
+    name: t("name"),
+    role: t("role"),
   };
 
   const buttons = [
     {
       id: "view-work",
-      label: t('viewWork'),
+      label: t("viewWork"),
       href: "#projects",
       icon: ArrowRight,
       variant: "primary" as const,
     },
     {
       id: "contact-me",
-      label: t('contactMe'),
+      label: t("contactMe"),
       href: "#contact",
       variant: "secondary" as const,
     },
@@ -39,13 +40,18 @@ export function PresentationSection() {
 
   return (
     <section className="relative flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-16">
+      {/* Lightning Background */}
+      <div className="absolute inset-0 -z-20">
+        <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={3} />
+      </div>
+
       <div className="container mx-auto max-w-6xl">
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
           {/* Content Column */}
           <div className="order-2 md:order-1">
             <PresentationBadge badge={badge} />
             <PresentationTitle title={title} />
-            <PresentationDescription description={t('description')} />
+            <PresentationDescription description={t("description")} />
             <PresentationCTA buttons={buttons} />
           </div>
 
