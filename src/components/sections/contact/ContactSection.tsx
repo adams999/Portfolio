@@ -1,17 +1,45 @@
+'use client';
+
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/layout/Section";
 import { ContactHighlights } from "@/components/sections/contact/ContactHighlights";
 import { ContactInfo } from "@/components/sections/contact/ContactInfo";
 import { ContactCTA } from "@/components/sections/contact/ContactCTA";
-import { highlights, contactInfo, ctaButtons } from "@/data/contact";
+import { contactInfo } from "@/data/contact";
 
 export function ContactSection() {
+  const t = useTranslations('contact');
+
+  const highlights = [
+    {
+      id: "experience",
+      title: t('highlight1Title'),
+      description: t('highlight1Description'),
+    },
+    {
+      id: "leadership",
+      title: t('highlight2Title'),
+      description: t('highlight2Description'),
+    },
+    {
+      id: "results",
+      title: t('highlight3Title'),
+      description: t('highlight3Description'),
+    },
+    {
+      id: "expertise",
+      title: t('highlight4Title'),
+      description: t('highlight4Description'),
+    },
+  ];
+
   return (
     <Section id="contact" className="mb-16">
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl">Let's Work Together</h2>
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl">{t('title')}</h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            I'm currently open to new opportunities and exciting projects. Let's connect and build something amazing!
+            {t('description')}
           </p>
         </div>
 
@@ -20,7 +48,7 @@ export function ContactSection() {
           <ContactInfo contactInfo={contactInfo} />
         </div>
 
-        <ContactCTA buttons={ctaButtons} />
+        <ContactCTA />
       </div>
     </Section>
   );

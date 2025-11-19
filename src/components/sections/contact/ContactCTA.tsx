@@ -1,13 +1,35 @@
+'use client';
+
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import type { CTAButton } from "@/types/contact";
+import { Mail, Linkedin } from "lucide-react";
 
 interface ContactCTAProps {
-  buttons: CTAButton[];
   className?: string;
 }
 
-export function ContactCTA({ buttons, className }: ContactCTAProps) {
+export function ContactCTA({ className }: ContactCTAProps) {
+  const t = useTranslations('contact');
+
+  const buttons = [
+    {
+      id: "email-cta",
+      label: t('sendEmail'),
+      href: "mailto:adamspurry@gmail.com",
+      icon: Mail,
+      variant: "primary" as const,
+    },
+    {
+      id: "linkedin-cta",
+      label: t('connectLinkedIn'),
+      href: "https://www.linkedin.com/in/adamsjcontreras",
+      icon: Linkedin,
+      variant: "secondary" as const,
+      external: true,
+    },
+  ];
+
   return (
     <div className={cn("flex flex-wrap justify-center gap-4", className)}>
       {buttons.map((button) => {

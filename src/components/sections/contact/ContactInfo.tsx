@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { ContactInfoItem } from "@/types/contact";
@@ -8,9 +11,11 @@ interface ContactInfoProps {
 }
 
 export function ContactInfo({ contactInfo, className }: ContactInfoProps) {
+  const t = useTranslations('contact');
+
   return (
     <div className={cn("bg-white/5 rounded-2xl p-6 border border-white/10", className)}>
-      <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+      <h3 className="text-xl font-semibold text-white mb-4">{t('contactInformation')}</h3>
       <div className="space-y-4 text-gray-400">
         {contactInfo.map((info) => {
           const Icon = info.icon;
@@ -22,7 +27,7 @@ export function ContactInfo({ contactInfo, className }: ContactInfoProps) {
             <div key={info.id} className="flex items-center gap-3">
               <Icon className="h-5 w-5 text-blue-400" />
               <div>
-                <p className="text-sm text-gray-500">{info.label}</p>
+                <p className="text-sm text-gray-500">{t(info.id as 'email' | 'github' | 'linkedin')}</p>
                 <Link
                   href={info.href}
                   {...linkProps}

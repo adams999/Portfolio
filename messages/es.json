@@ -1,0 +1,112 @@
+{
+  "header": {
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "presentation": {
+    "badge": "Disponible para nuevos proyectos",
+    "name": "Adams J. Contreras",
+    "role": "Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack con más de 7 años de experiencia construyendo soluciones web y móviles escalables y de alto rendimiento.",
+    "viewWork": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "intro": "Soy {name}, un desarrollador venezolano con más de 7 años de experiencia en tecnologías web.",
+    "experience": "Mi experiencia abarca tanto el desarrollo {backend} como {frontend}, así como aplicaciones móviles. He trabajado como {teamLead} gestionando equipos multiculturales, siempre enfocado en resultados, plazos de entrega y optimización de código.",
+    "passion": "Me apasiona crear soluciones tecnológicas eficientes y escalables, priorizando las mejores prácticas y la calidad del producto final.",
+    "backend": "backend",
+    "frontend": "frontend",
+    "teamLead": "Líder de Equipo",
+    "nationality": "Nacionalidad",
+    "nationalityValue": "Venezolano",
+    "experienceLabel": "Experiencia",
+    "experienceValue": "+7 años",
+    "roles": "Roles",
+    "rolesValue": "Desarrollador Full Stack, Líder de Equipo"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "description": "Experiencia integral en tecnologías web modernas, desarrollo móvil e infraestructura en la nube",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Móvil",
+    "database": "Base de Datos",
+    "devops": "DevOps y Nube",
+    "tools": "Herramientas y Otros"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "description": "Aplicaciones de nivel empresarial y soluciones listas para producción que muestran experiencia full-stack, arquitectura escalable y mejores prácticas de la industria",
+    "items": {
+      "simustream": {
+        "title": "SimuStream - Backend de Plataforma de Video",
+        "description": "Plataforma de streaming de video de grado de producción con MongoDB, Express, Socket.io, pagos con Stripe, almacenamiento AWS S3, analíticas de reproductor, notificaciones por email, sistema de referidos y automatización basada en cron. Solución empresarial completa."
+      },
+      "nextjs-strapi": {
+        "title": "Next.js 16 + Strapi CMS",
+        "description": "Aplicación full-stack con Next.js 16 y Strapi 5, con autenticación JWT, gestión de contenido dinámico, rutas protegidas y caché del lado del servidor. Construido con arquitectura moderna de App Router."
+      },
+      "shopify-integration": {
+        "title": "API de Integración con Shopify",
+        "description": "Middleware backend que conecta las plataformas Shopify y Simustream. Incluye sincronización automática de webhooks para productos, autenticación OAuth, integración con Stripe y HTTPS con certificados SSL."
+      },
+      "video-player-monorepo": {
+        "title": "Monorepo de Reproductor de Video",
+        "description": "Monorepo modular con múltiples implementaciones de reproductor de video usando diferentes arquitecturas. Incluye reproductor basado en webpack, librería de componentes compartidos y reproductor ligero con jQuery para diversos escenarios de despliegue."
+      },
+      "fastapi-supabase": {
+        "title": "API REST FastAPI + Supabase",
+        "description": "API REST moderna con arquitectura MVC y 79% de cobertura de pruebas. Incluye operaciones CRUD completas, validación con Pydantic, documentación Swagger auto-generada y backend PostgreSQL con Supabase."
+      },
+      "angular-enterprise": {
+        "title": "Arquitectura Empresarial Angular",
+        "description": "Aplicación Angular 16 escalable que demuestra arquitectura modular con carga diferida, configuración estricta de TypeScript, configuración completa de pruebas con Jasmine/Karma y optimización lista para producción."
+      },
+      "mcp-ai-email": {
+        "title": "Integración MCP AI Email",
+        "description": "Herramienta Model Context Protocol que conecta sistemas de IA con funcionalidad de correo electrónico, permitiendo automatización inteligente de emails basada en lógica de negocio. Construido con TypeScript para integración perfecta con IA."
+      },
+      "eslint-config": {
+        "title": "Paquete de Configuración ESLint",
+        "description": "Paquete de configuración ESLint de grado empresarial publicado en npm para proyectos de Strut Software y Rithm Software. Incluye configuraciones modulares para JavaScript, TypeScript, Angular, RxJS con herencia componible."
+      },
+      "php-rest-api": {
+        "title": "API REST PHP con MySQL",
+        "description": "API REST profesional construida con PHP 8 siguiendo el patrón MVC. Incluye registro de peticiones HTTP, manejo de errores multilingüe, respuestas JSON estandarizadas y configuración basada en base de datos."
+      },
+      "ils-travel-insurance": {
+        "title": "App Móvil ILS Seguros de Viaje",
+        "description": "Aplicación móvil maestra para gestión de seguros de viaje construida con Ionic 6 y Angular 10. Incluye acceso multi-cliente, sistema de cotización unificado, cálculos de precios en tiempo real, notificaciones SMS/email y soporte multi-idioma (ES/EN/PT). APK de producción con plugins nativos de Cordova."
+      },
+      "travelkit-insurance": {
+        "title": "App Móvil TravelKit Seguros",
+        "description": "Aplicación de seguros de viaje multiplataforma con Ionic y Angular. Integra pasarelas de pago Authorize.net y PayPal, incluye generación dinámica de cotizaciones, procesamiento de formularios de pago y componentes móviles nativos. Incluye internacionalización y notificaciones SMS."
+      },
+      "voyager-insurance": {
+        "title": "App Móvil Voyager Seguros",
+        "description": "Plataforma móvil de cotización de seguros con dashboards estadísticos avanzados y analíticas. Construida con Ionic 6 y Angular 10, incluye cálculos en tiempo real, notificaciones por email, procesamiento de pagos y herramientas de reportes completas para gestión de seguros de viaje."
+      }
+    }
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "description": "Actualmente estoy abierto a nuevas oportunidades y proyectos emocionantes. ¡Conectemos y construyamos algo increíble!",
+    "highlight1Title": "+7 Años",
+    "highlight1Description": "de experiencia comprobada en desarrollo full-stack",
+    "highlight2Title": "Liderazgo de Equipos",
+    "highlight2Description": "con equipos multiculturales en diferentes zonas horarias",
+    "highlight3Title": "Orientado a Resultados",
+    "highlight3Description": "enfoque con foco en entrega y optimización",
+    "highlight4Title": "Experiencia Full-stack",
+    "highlight4Description": "en tecnologías web y móviles modernas",
+    "contactInformation": "Información de Contacto",
+    "email": "Correo",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "sendEmail": "Envíame un correo",
+    "connectLinkedIn": "Conecta en LinkedIn"
+  }
+}

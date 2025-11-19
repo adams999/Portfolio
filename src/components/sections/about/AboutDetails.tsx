@@ -1,22 +1,21 @@
+'use client';
+
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
-interface DetailItem {
-  label: string;
-  value: string;
-}
-
 interface AboutDetailsProps {
-  details?: DetailItem[];
   className?: string;
 }
 
-const defaultDetails: DetailItem[] = [
-  { label: "Nationality", value: "Venezuelan" },
-  { label: "Experience", value: "+7 years" },
-  { label: "Roles", value: "Full Stack Developer, Team Lead" },
-];
+export function AboutDetails({ className }: AboutDetailsProps) {
+  const t = useTranslations('about');
 
-export function AboutDetails({ details = defaultDetails, className }: AboutDetailsProps) {
+  const details = [
+    { label: t('nationality'), value: t('nationalityValue') },
+    { label: t('experienceLabel'), value: t('experienceValue') },
+    { label: t('roles'), value: t('rolesValue') },
+  ];
+
   return (
     <div className={cn("space-y-6", className)}>
       <div className="pt-4 space-y-2 text-sm text-gray-400">
