@@ -5,6 +5,7 @@ import { PresentationBadge } from "@/components/sections/presentation/Presentati
 import { PresentationTitle } from "@/components/sections/presentation/PresentationTitle";
 import { PresentationDescription } from "@/components/sections/presentation/PresentationDescription";
 import { PresentationCTA } from "@/components/sections/presentation/PresentationCTA";
+import { PresentationImage } from "@/components/sections/presentation/PresentationImage";
 import { ArrowRight } from "lucide-react";
 
 export function PresentationSection() {
@@ -38,11 +39,21 @@ export function PresentationSection() {
 
   return (
     <section className="relative flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-16">
-      <div className="container mx-auto max-w-4xl">
-        <PresentationBadge badge={badge} />
-        <PresentationTitle title={title} />
-        <PresentationDescription description={t('description')} />
-        <PresentationCTA buttons={buttons} />
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
+          {/* Content Column */}
+          <div className="order-2 md:order-1">
+            <PresentationBadge badge={badge} />
+            <PresentationTitle title={title} />
+            <PresentationDescription description={t('description')} />
+            <PresentationCTA buttons={buttons} />
+          </div>
+
+          {/* Image Column */}
+          <div className="order-1 md:order-2">
+            <PresentationImage />
+          </div>
+        </div>
       </div>
 
       {/* Background Gradient Blobs */}
