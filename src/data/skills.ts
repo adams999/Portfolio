@@ -4,7 +4,6 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "frontend",
     title: "Frontend",
-    icon: "🎨",
     skills: [
       "React",
       "Next.js",
@@ -19,20 +18,10 @@ export const skillCategories: SkillCategory[] = [
       "Redux",
       "Zustand",
     ],
-    gradient: {
-      from: "from-blue-500/10",
-      to: "to-purple-500/10",
-    },
-    borderColor: "border-blue-500/20",
-    borderHoverColor: "border-blue-500/40",
-    bgColor: "bg-blue-500/10",
-    bgHoverColor: "bg-blue-500/20",
-    iconBg: "bg-blue-500/20",
   },
   {
     id: "backend",
     title: "Backend",
-    icon: "⚙️",
     skills: [
       "Node.js",
       ".NET",
@@ -48,20 +37,10 @@ export const skillCategories: SkillCategory[] = [
       "tRPC",
       "Microservices",
     ],
-    gradient: {
-      from: "from-green-500/10",
-      to: "to-emerald-500/10",
-    },
-    borderColor: "border-green-500/20",
-    borderHoverColor: "border-green-500/40",
-    bgColor: "bg-green-500/10",
-    bgHoverColor: "bg-green-500/20",
-    iconBg: "bg-green-500/20",
   },
   {
     id: "mobile",
     title: "Mobile",
-    icon: "📱",
     skills: [
       "Ionic",
       "Gradle",
@@ -73,20 +52,10 @@ export const skillCategories: SkillCategory[] = [
       "App Store",
       "Play Store",
     ],
-    gradient: {
-      from: "from-purple-500/10",
-      to: "to-pink-500/10",
-    },
-    borderColor: "border-purple-500/20",
-    borderHoverColor: "border-purple-500/40",
-    bgColor: "bg-purple-500/10",
-    bgHoverColor: "bg-purple-500/20",
-    iconBg: "bg-purple-500/20",
   },
   {
     id: "database",
     title: "Database",
-    icon: "🗄️",
     skills: [
       "PostgreSQL",
       "MySQL",
@@ -99,20 +68,10 @@ export const skillCategories: SkillCategory[] = [
       "SQL",
       "NoSQL",
     ],
-    gradient: {
-      from: "from-orange-500/10",
-      to: "to-red-500/10",
-    },
-    borderColor: "border-orange-500/20",
-    borderHoverColor: "border-orange-500/40",
-    bgColor: "bg-orange-500/10",
-    bgHoverColor: "bg-orange-500/20",
-    iconBg: "bg-orange-500/20",
   },
   {
     id: "devops",
     title: "DevOps & Cloud",
-    icon: "☁️",
     skills: [
       "AWS",
       "Azure",
@@ -125,20 +84,10 @@ export const skillCategories: SkillCategory[] = [
       "Linux",
       "Git",
     ],
-    gradient: {
-      from: "from-cyan-500/10",
-      to: "to-blue-500/10",
-    },
-    borderColor: "border-cyan-500/20",
-    borderHoverColor: "border-cyan-500/40",
-    bgColor: "bg-cyan-500/10",
-    bgHoverColor: "bg-cyan-500/20",
-    iconBg: "bg-cyan-500/20",
   },
   {
     id: "tools",
     title: "Tools & Others",
-    icon: "🛠️",
     skills: [
       "Agile/Scrum",
       "Jira",
@@ -151,14 +100,5 @@ export const skillCategories: SkillCategory[] = [
       "VS Code",
       "Postman",
     ],
-    gradient: {
-      from: "from-yellow-500/10",
-      to: "to-orange-500/10",
-    },
-    borderColor: "border-yellow-500/20",
-    borderHoverColor: "border-yellow-500/40",
-    bgColor: "bg-yellow-500/10",
-    bgHoverColor: "bg-yellow-500/20",
-    iconBg: "bg-yellow-500/20",
   },
 ];
