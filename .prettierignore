@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+.next
+out
+build
+dist
+
+# Environment and config
+.env
+.env.*
+*.log
+
+# IDE and system files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Other
+coverage
+.nyc_output
+next-env.d.ts
+public

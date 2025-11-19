@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, LucideIcon } from "lucide-react";
+import { Github, Linkedin, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SocialLink {
