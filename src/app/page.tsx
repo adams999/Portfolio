@@ -82,18 +82,124 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-white">Tech Stack</h3>
+              <div className="pt-4 space-y-2 text-sm text-gray-400 mb-6">
+                <p><span className="text-white font-semibold">Nationality:</span> Venezuelan</p>
+                <p><span className="text-white font-semibold">Experience:</span> +7 years</p>
+                <p><span className="text-white font-semibold">Roles:</span> Full Stack Developer, Team Lead</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Skills Section */}
+      <Section id="skills" className="bg-white/5">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl text-center">Technical Skills</h2>
+          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+            Comprehensive expertise across modern web technologies, mobile development, and cloud infrastructure
+          </p>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Frontend */}
+            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <span className="text-2xl">🎨</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Frontend</h3>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "GraphQL", "Docker", "AWS"].map((tech) => (
-                  <span key={tech} className="rounded-md bg-white/10 px-3 py-2 text-sm text-gray-300">
+                {["React", "Next.js", "Vue.js", "Angular", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Redux", "Zustand"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-blue-500/20 transition-colors">
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="pt-4 space-y-2 text-sm text-gray-400">
-                <p><span className="text-white font-semibold">Nationality:</span> Venezuelan</p>
-                <p><span className="text-white font-semibold">Experience:</span> +7 years</p>
-                <p><span className="text-white font-semibold">Roles:</span> Full Stack Developer, Team Lead</p>
+            </div>
+
+            {/* Backend */}
+            <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl p-6 border border-green-500/20 hover:border-green-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
+                  <span className="text-2xl">⚙️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Backend</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["Node.js", ".NET", "Express", "NestJS", "Python", "Django", "FastAPI", "PHP", "Laravel", "REST APIs", "GraphQL", "tRPC", "Microservices"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-green-500/10 border border-green-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-green-500/20 transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile */}
+            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                  <span className="text-2xl">📱</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Mobile</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["Ionic", "Gradle", "Flutter", "XCode", "iOS", "Android", "Mobile UI/UX", "App Store", "Play Store"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-purple-500/10 border border-purple-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-purple-500/20 transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Database */}
+            <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl p-6 border border-orange-500/20 hover:border-orange-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                  <span className="text-2xl">🗄️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Database</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase", "Supabase", "Prisma", "TypeORM", "SQL", "NoSQL"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-orange-500/20 transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* DevOps & Cloud */}
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                  <span className="text-2xl">☁️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">DevOps & Cloud</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Nginx", "Linux", "Git"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-cyan-500/10 border border-cyan-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-cyan-500/20 transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Others */}
+            <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center">
+                  <span className="text-2xl">🛠️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Tools & Others</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["Agile/Scrum", "Jira", "Team Leadership", "Code Review", "Testing", "Jest", "Cypress", "Figma", "VS Code", "Postman"].map((tech) => (
+                  <span key={tech} className="rounded-lg bg-yellow-500/10 border border-yellow-500/20 px-3 py-1.5 text-sm text-gray-300 hover:bg-yellow-500/20 transition-colors">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
