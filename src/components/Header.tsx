@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="text-xl font-bold tracking-tight hover:text-gray-300 transition-colors">
-          Adams Contreras
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight hover:text-gray-300 transition-colors">
+          <Image src="/adams.png" alt="Adams Logo" width={32} height={32} className="rounded-full" />
+          Adams C.Dev
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium">
           <Link href="#about" className="hover:text-gray-300 transition-colors">
