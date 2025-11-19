@@ -1,5 +1,5 @@
-import { Section } from "@/components/Section";
-import { ProjectCard } from "@/components/ProjectCard";
+import { Section } from "@/components/layout/Section";
+import { ProjectCard } from "@/components/sections/projects/ProjectCard";
 import { projects } from "@/data/projects";
 
 export function ProjectsSection() {

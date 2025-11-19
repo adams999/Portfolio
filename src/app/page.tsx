@@ -1,8 +1,8 @@
-import { TopNavSection } from "@/components/TopNavSection";
-import { AboutSection } from "@/components/AboutSection";
-import { SkillsSection } from "@/components/SkillsSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { ContactSection } from "@/components/ContactSection";
+import { TopNavSection } from "@/components/sections/topnav/TopNavSection";
+import { AboutSection } from "@/components/sections/about/AboutSection";
+import { SkillsSection } from "@/components/sections/skills/SkillsSection";
+import { ProjectsSection } from "@/components/sections/projects/ProjectsSection";
+import { ContactSection } from "@/components/sections/contact/ContactSection";
 
 export default function Home() {
   return (

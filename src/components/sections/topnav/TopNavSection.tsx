@@ -1,7 +1,7 @@
-import { TopNavBadge } from "@/components/TopNavBadge";
-import { TopNavTitle } from "@/components/TopNavTitle";
-import { TopNavDescription } from "@/components/TopNavDescription";
-import { TopNavCTA } from "@/components/TopNavCTA";
+import { TopNavBadge } from "@/components/sections/topnav/TopNavBadge";
+import { TopNavTitle } from "@/components/sections/topnav/TopNavTitle";
+import { TopNavDescription } from "@/components/sections/topnav/TopNavDescription";
+import { TopNavCTA } from "@/components/sections/topnav/TopNavCTA";
 import { topNavData } from "@/data/topnav";
 
 export function TopNavSection() {

@@ -1,5 +1,5 @@
-import { Section } from "@/components/Section";
-import { SkillCard } from "@/components/SkillCard";
+import { Section } from "@/components/layout/Section";
+import { SkillCard } from "@/components/sections/skills/SkillCard";
 import { skillCategories } from "@/data/skills";
 
 export function SkillsSection() {

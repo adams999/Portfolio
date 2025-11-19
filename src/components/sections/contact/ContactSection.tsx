@@ -1,7 +1,7 @@
-import { Section } from "@/components/Section";
-import { ContactHighlights } from "@/components/ContactHighlights";
-import { ContactInfo } from "@/components/ContactInfo";
-import { ContactCTA } from "@/components/ContactCTA";
+import { Section } from "@/components/layout/Section";
+import { ContactHighlights } from "@/components/sections/contact/ContactHighlights";
+import { ContactInfo } from "@/components/sections/contact/ContactInfo";
+import { ContactCTA } from "@/components/sections/contact/ContactCTA";
 import { highlights, contactInfo, ctaButtons } from "@/data/contact";
 
 export function ContactSection() {

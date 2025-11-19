@@ -1,7 +1,7 @@
-import { Section } from "@/components/Section";
-import { AboutInfo } from "@/components/AboutInfo";
-import { AboutDetails } from "@/components/AboutDetails";
-import { SocialLinks } from "@/components/SocialLinks";
+import { Section } from "@/components/layout/Section";
+import { AboutInfo } from "@/components/sections/about/AboutInfo";
+import { AboutDetails } from "@/components/sections/about/AboutDetails";
+import { SocialLinks } from "@/components/sections/about/SocialLinks";
 
 export function AboutSection() {
   return (
