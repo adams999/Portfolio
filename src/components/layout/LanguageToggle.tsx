@@ -20,8 +20,15 @@ export function LanguageToggle() {
   const currentLocale = (params.locale as Locale) || 'en';
 
   const handleLanguageChange = (locale: Locale) => {
+    const scrollPosition = window.scrollY;
+
     startTransition(() => {
-      router.replace(pathname, { locale });
+      router.replace(pathname, { locale, scroll: false });
+
+      // Restore scroll position after navigation
+      setTimeout(() => {
+        window.scrollTo(0, scrollPosition);
+      }, 0);
     });
   };
 
