@@ -7,7 +7,7 @@ import { PresentationDescription } from "@/components/sections/presentation/Pres
 import { PresentationCTA } from "@/components/sections/presentation/PresentationCTA";
 import { PresentationImage } from "@/components/sections/presentation/PresentationImage";
 import { ArrowRight } from "lucide-react";
-import Lightning from "../lightning/Lightning";
+import Lightning from "../ui-efects/Lightning";
 
 export function PresentationSection() {
   const t = useTranslations("presentation");
