@@ -39,7 +39,7 @@ export function PresentationSection() {
   ];
 
   return (
-    <section className="relative flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-16">
+    <section className="relative pb-12 flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-16">
       {/* Lightning Background */}
       <div className="absolute inset-0 -z-20">
         <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={3} />
