@@ -7,7 +7,7 @@ interface SkillCardProps {
   className?: string;
 }
 
-// Mapeo de iconos Font Awesome por categoría
+// Font Awesome icons mapping by category
 const categoryIcons: Record<string, { icon: string; color: string }> = {
   frontend: { icon: "fas fa-laptop-code", color: "text-gray-600 dark:text-white" },
   backend: { icon: "fas fa-server", color: "text-gray-600 dark:text-white" },
@@ -17,7 +17,7 @@ const categoryIcons: Record<string, { icon: string; color: string }> = {
   tools: { icon: "fas fa-toolbox", color: "text-gray-600 dark:text-white" }
 };
 
-// Estilos con colores suaves - Diseño elegante y profesional
+// Styles with soft colors - Elegant and professional design
 const categoryStyles = {
   frontend: {
     gradient: "from-blue-100 to-indigo-100 dark:from-blue-950/30 dark:to-indigo-950/30",

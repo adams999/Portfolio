@@ -3,7 +3,7 @@ export interface TechIconConfig {
   color: string;
 }
 
-// Mapeo de tecnologías a iconos de Font Awesome con colores personalizados
+// Mapping of technologies to Font Awesome icons with custom colors
 export const techIcons: Record<string, TechIconConfig> = {
   // Frontend
   "React": { icon: "fab fa-react", color: "text-cyan-500" },
@@ -117,7 +117,7 @@ export const techIcons: Record<string, TechIconConfig> = {
   "Analytics": { icon: "fas fa-chart-line", color: "text-blue-600" },
 };
 
-// Función para obtener el icono de una tecnología
+// Function to get the icon for a technology
 export function getTechIcon(tech: string): TechIconConfig {
   return techIcons[tech] || { icon: "fas fa-code", color: "text-gray-600 dark:text-gray-400" };
 }
