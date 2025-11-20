@@ -10,7 +10,7 @@ export function PresentationTitle({ title, className }: PresentationTitleProps) 
   return (
     <h1
       className={cn(
-        "mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white md:text-7xl lg:text-8xl",
+        "mb-6 text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white md:text-7xl lg:text-8xl",
         className
       )}
     >

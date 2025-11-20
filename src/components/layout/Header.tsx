@@ -16,7 +16,7 @@ export function Header() {
           <Image src="/adams.png" alt="Adams Logo" width={32} height={32} className="rounded-full ring-2 ring-gray-200 dark:ring-white/10" />
           <span className="hidden sm:inline">Adams C.Dev</span>
         </Link>
-        <nav className="flex items-center gap-6 text-sm font-medium">
+        <nav className="flex items-center gap-2 sm:gap-6 text-sm font-medium">
           <Link href="#about" className="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-white transition-colors relative group">
             <span>{t('about')}</span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -29,7 +29,7 @@ export function Header() {
             <span>{t('contact')}</span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <div className="flex items-center gap-2 ml-2">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
             <LanguageToggle />
           </div>
