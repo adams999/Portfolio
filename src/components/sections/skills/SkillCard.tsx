@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { SkillCategory } from "@/types/skills";
+import { getTechIcon } from "@/lib/techIcons";
 import {
   Code2,
   Server,
@@ -94,19 +95,22 @@ export function SkillCard({ category, className }: SkillCardProps) {
           </h3>
         </div>
         <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <span
-              key={skill.name}
-              className={cn(
-                "rounded-md border px-3 py-1.5 text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors duration-200 flex items-center gap-2",
-                styles.skillBg,
-                "hover:text-gray-900 dark:hover:text-white"
-              )}
-            >
-              <i className={skill.icon}></i>
-              {skill.name}
-            </span>
-          ))}
+          {skills.map((skill) => {
+            const techConfig = getTechIcon(skill.name);
+            return (
+              <span
+                key={skill.name}
+                className={cn(
+                  "rounded-md border px-3 py-1.5 text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors duration-200 flex items-center gap-2",
+                  styles.skillBg,
+                  "hover:text-gray-900 dark:hover:text-white"
+                )}
+              >
+                <i className={`${techConfig.icon} ${techConfig.color}`}></i>
+                {skill.name}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>

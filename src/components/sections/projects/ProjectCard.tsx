@@ -35,15 +35,18 @@ export function ProjectCard({ title, description, tags, link, className }: Proje
       </div>
       <p className="mb-6 text-gray-600 dark:text-gray-400">{description}</p>
       <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-gray-100 dark:bg-white/5 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-white/10 flex items-center gap-1.5"
-          >
-            <i className={getTechIcon(tag)}></i>
-            {tag}
-          </span>
-        ))}
+        {tags.map((tag) => {
+          const techConfig = getTechIcon(tag);
+          return (
+            <span
+              key={tag}
+              className="rounded-full bg-gray-100 dark:bg-white/5 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-white/10 flex items-center gap-1.5"
+            >
+              <i className={`${techConfig.icon} ${techConfig.color}`}></i>
+              {tag}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
