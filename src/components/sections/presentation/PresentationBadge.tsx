@@ -22,7 +22,7 @@ export function PresentationBadge({ badge, className }: PresentationBadgeProps) 
   return (
     <div
       className={cn(
-        "mb-8 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-gray-300 backdrop-blur-sm",
+        "mb-8 inline-flex items-center rounded-full border border-gray-300 dark:border-white/10 bg-gray-100 dark:bg-white/5 px-3 py-1 text-sm text-gray-700 dark:text-gray-300 backdrop-blur-sm",
         className
       )}
     >

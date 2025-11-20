@@ -11,17 +11,17 @@ export function AboutInfo({ className }: AboutInfoProps) {
   const t = useTranslations('about');
 
   return (
-    <div className={cn("space-y-6 text-gray-400", className)}>
+    <div className={cn("space-y-6 text-gray-600 dark:text-gray-400", className)}>
       <p>
         {t.rich('intro', {
-          name: (chunks: React.ReactNode) => <span className="text-white font-semibold">{chunks}</span>,
+          name: (chunks: React.ReactNode) => <span className="text-gray-900 dark:text-white font-semibold">{chunks}</span>,
         })}
       </p>
       <p>
         {t.rich('experience', {
-          backend: (chunks: React.ReactNode) => <span className="text-white">{chunks}</span>,
-          frontend: (chunks: React.ReactNode) => <span className="text-white">{chunks}</span>,
-          teamLead: (chunks: React.ReactNode) => <span className="text-white font-semibold">{chunks}</span>,
+          backend: (chunks: React.ReactNode) => <span className="text-gray-900 dark:text-white">{chunks}</span>,
+          frontend: (chunks: React.ReactNode) => <span className="text-gray-900 dark:text-white">{chunks}</span>,
+          teamLead: (chunks: React.ReactNode) => <span className="text-gray-900 dark:text-white font-semibold">{chunks}</span>,
         })}
       </p>
       <p>

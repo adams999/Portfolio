@@ -15,9 +15,9 @@ export function PresentationCTA({ buttons, className }: PresentationCTAProps) {
 
         const variantStyles = {
           primary:
-            "bg-white text-black hover:bg-gray-200",
+            "bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200",
           secondary:
-            "border border-white/20 bg-transparent text-white hover:bg-white/10",
+            "border border-gray-300 dark:border-white/20 bg-transparent text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10",
         };
 
         return (

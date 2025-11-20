@@ -42,27 +42,27 @@ export function ImageModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/80 dark:bg-black/80 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
       <div
-        className="relative mx-4 w-full max-w-xl overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800 md:max-w-2xl"
+        className="relative mx-4 w-full max-w-xl overflow-hidden rounded-2xl bg-white dark:bg-gray-900 shadow-2xl ring-1 ring-gray-300 dark:ring-gray-800 md:max-w-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 rounded-full bg-gray-800/80 p-3 text-gray-400 backdrop-blur-sm transition-all duration-200 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 md:right-6 md:top-6"
+          className="absolute right-4 top-4 z-10 rounded-full bg-gray-200/80 dark:bg-gray-800/80 p-3 text-gray-700 dark:text-gray-400 backdrop-blur-sm transition-all duration-200 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 md:right-6 md:top-6"
           aria-label="Close modal"
         >
           <X className="h-7 w-7 md:h-8 md:w-8" />
         </button>
 
         {/* Image Container */}
-        <div className="relative h-[50vh] w-full bg-gray-950">
+        <div className="relative h-[50vh] w-full bg-gray-100 dark:bg-gray-950">
           <Image
             src={imageSrc}
             alt={imageAlt}
@@ -74,14 +74,14 @@ export function ImageModal({
         </div>
 
         {/* Name Display */}
-        <div className="border-t border-gray-800 bg-gradient-to-r from-gray-900 to-gray-950 px-8 py-8 md:px-12 md:py-10">
+        <div className="border-t border-gray-300 dark:border-gray-800 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 px-8 py-8 md:px-12 md:py-10">
           <h2
             id="modal-title"
-            className="text-center text-3xl font-bold text-white md:text-5xl"
+            className="text-center text-3xl font-bold text-gray-900 dark:text-white md:text-5xl"
           >
             {t('fullName')}
           </h2>
-          <p className="mt-3 text-center text-base text-gray-400 md:text-lg">
+          <p className="mt-3 text-center text-base text-gray-600 dark:text-gray-400 md:text-lg">
             {t('modalRole')}
           </p>
         </div>

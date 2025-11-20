@@ -19,14 +19,14 @@ export function PresentationImage() {
       {/* Image Container with Effects */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="group relative z-10 cursor-pointer transition-transform duration-500 ease-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950"
+        className="group relative z-10 cursor-pointer transition-transform duration-500 ease-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-950"
         aria-label="View profile image"
       >
         {/* Gradient Border */}
         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-75 blur-sm transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />
 
         {/* Image */}
-        <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gray-900 ring-4 ring-gray-900/50 md:h-72 md:w-72">
+        <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-900 ring-4 ring-gray-300/50 dark:ring-gray-900/50 md:h-72 md:w-72">
           <Image
             src="/adams.png"
             alt="Adams - Full Stack Developer"

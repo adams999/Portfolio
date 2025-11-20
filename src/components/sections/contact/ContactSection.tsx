@@ -37,8 +37,8 @@ export function ContactSection() {
     <Section id="contact" className="mb-16">
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl">{t('title')}</h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl text-gray-900 dark:text-white">{t('title')}</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             {t('description')}
           </p>
         </div>

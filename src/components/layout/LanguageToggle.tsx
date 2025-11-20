@@ -35,7 +35,7 @@ export function LanguageToggle() {
   return (
     <div className="relative group">
       <button
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200 text-sm font-medium"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-300 dark:border-white/10 hover:border-gray-400 dark:hover:border-white/20 transition-all duration-200 text-sm font-medium text-gray-900 dark:text-white"
         aria-label="Change language"
       >
         <Globe className="w-4 h-4" />
@@ -46,7 +46,7 @@ export function LanguageToggle() {
 
       {/* Dropdown Menu */}
       <div className="absolute right-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div className="bg-black/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl overflow-hidden">
+        <div className="bg-white/95 dark:bg-black/95 backdrop-blur-xl border border-gray-300 dark:border-white/10 rounded-lg shadow-xl overflow-hidden">
           {languages.map((language) => (
             <button
               key={language.code}
@@ -56,8 +56,8 @@ export function LanguageToggle() {
                 w-full flex items-center gap-3 px-4 py-3 text-left transition-colors duration-150
                 ${
                   currentLocale === language.code
-                    ? 'bg-white/10 text-white'
-                    : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                    ? 'bg-gray-200 dark:bg-white/10 text-gray-900 dark:text-white'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white'
                 }
                 ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
               `}
@@ -65,7 +65,7 @@ export function LanguageToggle() {
               <span className="text-xl">{language.flag}</span>
               <span className="text-sm font-medium">{language.label}</span>
               {currentLocale === language.code && (
-                <span className="ml-auto text-xs text-gray-400">✓</span>
+                <span className="ml-auto text-xs text-gray-500 dark:text-gray-400">✓</span>
               )}
             </button>
           ))}

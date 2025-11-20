@@ -18,10 +18,10 @@ export function AboutDetails({ className }: AboutDetailsProps) {
 
   return (
     <div className={cn("space-y-6", className)}>
-      <div className="pt-4 space-y-2 text-sm text-gray-400">
+      <div className="pt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
         {details.map((detail) => (
           <p key={detail.label}>
-            <span className="text-white font-semibold">{detail.label}:</span> {detail.value}
+            <span className="text-gray-900 dark:text-white font-semibold">{detail.label}:</span> {detail.value}
           </p>
         ))}
       </div>

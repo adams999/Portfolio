@@ -40,9 +40,9 @@ export function ContactCTA({ className }: ContactCTAProps) {
 
         const variantStyles = {
           primary:
-            "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:shadow-purple-500/50",
+            "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:shadow-purple-500/50 dark:hover:shadow-purple-500/50",
           secondary:
-            "border border-white/20 bg-white/5 text-white hover:bg-white/10",
+            "border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10",
         };
 
         return (
