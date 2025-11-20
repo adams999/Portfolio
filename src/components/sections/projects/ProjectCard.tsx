@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getTechIcon } from "@/lib/techIcons";
 
 interface ProjectCardProps {
   title: string;
@@ -37,8 +38,9 @@ export function ProjectCard({ title, description, tags, link, className }: Proje
         {tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-gray-100 dark:bg-white/5 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-white/10"
+            className="rounded-full bg-gray-100 dark:bg-white/5 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-white/10 flex items-center gap-1.5"
           >
+            <i className={getTechIcon(tag)}></i>
             {tag}
           </span>
         ))}

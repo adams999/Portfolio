@@ -96,14 +96,15 @@ export function SkillCard({ category, className }: SkillCardProps) {
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
             <span
-              key={skill}
+              key={skill.name}
               className={cn(
-                "rounded-md border px-3 py-1.5 text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors duration-200",
+                "rounded-md border px-3 py-1.5 text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors duration-200 flex items-center gap-2",
                 styles.skillBg,
                 "hover:text-gray-900 dark:hover:text-white"
               )}
             >
-              {skill}
+              <i className={skill.icon}></i>
+              {skill.name}
             </span>
           ))}
         </div>
