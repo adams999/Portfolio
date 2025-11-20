@@ -21,12 +21,15 @@ Portfolio web profesional desarrollado con Next.js 16, React 19, TypeScript y Ta
 
 - **Diseño Responsive**: Adaptado para móviles, tablets y escritorio
 - **Multiidioma**: Soporte para inglés y español con next-intl
+- **Animaciones Profesionales**: Animaciones fluidas y dinámicas con GSAP
+- **Elementos 3D Interactivos**: Gráficos WebGL con Three.js y OGL
 - **Optimización de Rendimiento**: Server-side rendering y optimización de imágenes
 - **TypeScript**: Tipado estático para mayor seguridad y mantenibilidad
 - **Tailwind CSS 4**: Estilos modernos con la última versión
 - **SEO Optimizado**: Metadata configurada para mejores resultados de búsqueda
-- **Componentes Modulares**: Arquitectura escalable y reutilizable
+- **Componentes Modulares**: Arquitectura escalable y reutilizable con CVA
 - **Iconos con Lucide React**: Biblioteca de iconos moderna y ligera
+- **Calidad de Código**: ESLint y Prettier configurados para mantener estándares
 
 ## Stack Tecnológico
 
@@ -46,14 +49,23 @@ Portfolio web profesional desarrollado con Next.js 16, React 19, TypeScript y Ta
 
 - **[next-intl 4.5.5](https://next-intl-docs.vercel.app/)** - Solución i18n para Next.js
 
-### UI Components
+### UI Components & Animaciones
 
 - **[lucide-react 0.554.0](https://lucide.dev/)** - Iconos SVG modernos
+- **[GSAP 3.13.0](https://gsap.com/)** - Biblioteca de animaciones profesional
+- **[Three.js 0.181.2](https://threejs.org/)** - Biblioteca 3D para WebGL
+- **[OGL 1.0.11](https://github.com/oframe/ogl)** - Biblioteca WebGL ligera y rápida
+
+### Utilidades de Estilos
+
+- **[class-variance-authority 0.7.1](https://cva.style/docs)** - CVA para variantes de componentes
 
 ### Herramientas de Desarrollo
 
 - **[ESLint 9](https://eslint.org/)** - Linter de código JavaScript/TypeScript
+- **[Prettier 3.6.2](https://prettier.io/)** - Formateador de código
 - **[PostCSS](https://postcss.org/)** - Procesador de CSS
+- **[tw-animate-css 1.4.0](https://github.com/bentatum/tw-animate-css)** - Animaciones CSS para Tailwind
 
 ## Estructura del Proyecto
 
@@ -161,6 +173,13 @@ npm run start        # Inicia servidor de producción (requiere build previo)
 
 # Calidad de código
 npm run lint         # Ejecuta ESLint para verificar el código
+npm run lint:fix     # Ejecuta ESLint y corrige automáticamente los errores
+npm run lint:strict  # Ejecuta ESLint sin permitir warnings (max-warnings 0)
+npm run type-check   # Verifica tipos de TypeScript sin generar archivos
+
+# Formateo de código
+npm run format:check # Verifica el formato del código con Prettier
+npm run format:write # Formatea automáticamente el código con Prettier
 ```
 
 ## Configuración
@@ -178,8 +197,8 @@ El proyecto usa TypeScript con configuración estricta. Path aliases configurado
 Uso en imports:
 
 ```typescript
-import { Component } from '@/components/Component'
-import { utils } from '@/lib/utils'
+import { Component } from "@/components/Component";
+import { utils } from "@/lib/utils";
 ```
 
 ### Tailwind CSS
@@ -192,13 +211,13 @@ Tailwind CSS 4 está configurado con PostCSS. Para personalizar:
 Utilidad `cn()` disponible en `src/lib/utils.ts` para merge de clases:
 
 ```typescript
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 const className = cn(
-  'base-class',
-  condition && 'conditional-class',
-  'more-classes'
-)
+  "base-class",
+  condition && "conditional-class",
+  "more-classes"
+);
 ```
 
 ### Next.js
@@ -229,9 +248,9 @@ messages/
 Locales definidos en `src/i18n/config.ts`:
 
 ```typescript
-export type Locale = 'en' | 'es';
-export const locales: Locale[] = ['en', 'es'];
-export const defaultLocale: Locale = 'en';
+export type Locale = "en" | "es";
+export const locales: Locale[] = ["en", "es"];
+export const defaultLocale: Locale = "en";
 ```
 
 ### Uso en Componentes
@@ -323,14 +342,14 @@ export interface NuevoDato {
 
 ```typescript
 // src/data/nuevo-dato.ts
-import type { NuevoDato } from '@/types/nuevo-dato';
+import type { NuevoDato } from "@/types/nuevo-dato";
 
 export const nuevosDatos: NuevoDato[] = [
   {
-    id: '1',
-    titulo: 'Título',
-    descripcion: 'Descripción'
-  }
+    id: "1",
+    titulo: "Título",
+    descripcion: "Descripción",
+  },
 ];
 ```
 
@@ -344,9 +363,9 @@ Por defecto, todos los componentes son **Server Components**. Usar `'use client'
 - Contextos de React
 
 ```typescript
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ClientComponent() {
   const [state, setState] = useState(0);
@@ -373,7 +392,6 @@ El build genera:
 ### Despliegue en Vercel (Recomendado)
 
 1. **Conectar repositorio a Vercel**
-
    - Visita [vercel.com/new](https://vercel.com/new)
    - Importa tu repositorio Git
 
@@ -464,7 +482,7 @@ App
 
 ### ESLint
 
-Configuración en `eslint.config.mjs` con reglas de Next.js.
+Configuración en `eslint.config.mjs` con reglas de Next.js y Prettier.
 
 **Ejecutar linter:**
 
@@ -475,7 +493,29 @@ npm run lint
 **Auto-fix:**
 
 ```bash
-npm run lint -- --fix
+npm run lint:fix
+```
+
+**Modo estricto (sin warnings):**
+
+```bash
+npm run lint:strict
+```
+
+### Prettier
+
+Configuración en `.prettierrc` para formateo consistente.
+
+**Verificar formato:**
+
+```bash
+npm run format:check
+```
+
+**Formatear código:**
+
+```bash
+npm run format:write
 ```
 
 ### TypeScript
@@ -483,7 +523,20 @@ npm run lint -- --fix
 Type checking estricto habilitado:
 
 ```bash
+npm run type-check
+# o directamente
 npx tsc --noEmit
+```
+
+### Workflow Recomendado
+
+Antes de hacer commit:
+
+```bash
+npm run format:write  # Formatear código
+npm run lint:fix      # Corregir errores de linting
+npm run type-check    # Verificar tipos
+npm run build         # Verificar que el build funciona
 ```
 
 ### Mejores Prácticas
@@ -494,12 +547,15 @@ npx tsc --noEmit
 4. **Mantener componentes pequeños** (< 200 líneas)
 5. **Usar Server Components cuando sea posible** (mejor rendimiento)
 6. **Optimizar imágenes** (usar `next/image`)
+7. **Formatear código antes de commit** (usar Prettier)
+8. **Usar CVA para variantes de componentes** (mejor que clases condicionales complejas)
 
 ## Troubleshooting
 
 ### Error: Module not found
 
 Verificar:
+
 - Path aliases en `tsconfig.json`
 - Imports correctos usando `@/`
 - Archivos existen en las rutas especificadas
@@ -507,6 +563,7 @@ Verificar:
 ### Error: Hydration mismatch
 
 Causas comunes:
+
 - HTML diferente entre servidor y cliente
 - Usar `window` o `document` en Server Components
 - Extensiones de navegador modificando el DOM
@@ -537,7 +594,7 @@ Para más información sobre el proyecto, consulta la sección de contacto en el
 
 ---
 
-**Versión Node.js requerida:** 20.x o superior
-**Última actualización:** 2025
-**Framework:** Next.js 16.0.3
+**Versión Node.js requerida:** 20.x o superior  
+**Última actualización:** 20 de Noviembre, 2025  
+**Framework:** Next.js 16.0.3  
 **React:** 19.2.0
