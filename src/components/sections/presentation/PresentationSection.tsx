@@ -7,7 +7,7 @@ import { PresentationDescription } from "@/components/sections/presentation/Pres
 import { PresentationCTA } from "@/components/sections/presentation/PresentationCTA";
 import { PresentationImage } from "@/components/sections/presentation/PresentationImage";
 import { ArrowRight } from "lucide-react";
-import Lightning from "../ui-efects/Lightning";
+import DarkVeil from "../ui-efects/DarkVeil";
 
 export function PresentationSection() {
   const t = useTranslations("presentation");
@@ -39,10 +39,10 @@ export function PresentationSection() {
   ];
 
   return (
-    <section className="relative pb-12 flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-16">
+    <section className="relative pb-12 flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-7">
       {/* Lightning Background */}
       <div className="absolute inset-0 -z-20">
-        <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={3} />
+        <DarkVeil speed={0.5} warpAmount={2.5} hueShift={35} />
       </div>
 
       <div className="container mx-auto max-w-6xl">
