@@ -21,6 +21,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfolio Adams J. Contreras Ramírez",
   description: "Professional web developer portfolio showcasing full-stack projects, modern web applications, and software development skills. Explore my work in React, Next.js, and web technologies.",
+  icons: {
+    icon: '/icons/icon.png',
+    shortcut: '/icons/favicon.ico',
+    apple: '/icons/apple-icon.png',
+  },
 };
 
 export function generateStaticParams() {
