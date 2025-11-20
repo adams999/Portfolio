@@ -42,7 +42,7 @@ export function PresentationSection() {
     <section className="relative pb-12 flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-7">
       {/* Lightning Background */}
       <div className="absolute inset-0 -z-20">
-        <DarkVeil speed={0.5} warpAmount={2.5} hueShift={35} />
+        <DarkVeil speed={0.5} warpAmount={2} hueShift={35} backgroundColor="white" />
       </div>
 
       <div className="container mx-auto max-w-6xl">
