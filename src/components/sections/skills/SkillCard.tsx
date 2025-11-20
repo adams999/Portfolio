@@ -1,29 +1,20 @@
 import { cn } from "@/lib/utils";
 import type { SkillCategory } from "@/types/skills";
 import { getTechIcon } from "@/lib/techIcons";
-import {
-  Code2,
-  Server,
-  Smartphone,
-  Database,
-  Cloud,
-  Wrench,
-  type LucideIcon
-} from "lucide-react";
 
 interface SkillCardProps {
   category: SkillCategory;
   className?: string;
 }
 
-// Mapeo de iconos por categoría
-const categoryIcons: Record<string, LucideIcon> = {
-  frontend: Code2,
-  backend: Server,
-  mobile: Smartphone,
-  database: Database,
-  devops: Cloud,
-  tools: Wrench
+// Mapeo de iconos Font Awesome por categoría
+const categoryIcons: Record<string, { icon: string; color: string }> = {
+  frontend: { icon: "fas fa-laptop-code", color: "text-gray-600 dark:text-white" },
+  backend: { icon: "fas fa-server", color: "text-gray-600 dark:text-white" },
+  mobile: { icon: "fas fa-mobile-screen-button", color: "text-gray-600 dark:text-white" },
+  database: { icon: "fas fa-database", color: "text-gray-600 dark:text-white" },
+  devops: { icon: "fas fa-cloud-arrow-up", color: "text-gray-600 dark:text-white" },
+  tools: { icon: "fas fa-toolbox", color: "text-gray-600 dark:text-white" }
 };
 
 // Estilos con colores suaves - Diseño elegante y profesional
@@ -69,7 +60,7 @@ const categoryStyles = {
 export function SkillCard({ category, className }: SkillCardProps) {
   const { id, title, skills } = category;
   const styles = categoryStyles[id as keyof typeof categoryStyles];
-  const Icon = categoryIcons[id] || Code2;
+  const categoryIcon = categoryIcons[id] || { icon: "fas fa-code", color: "text-gray-600" };
 
   return (
     <div
@@ -84,11 +75,11 @@ export function SkillCard({ category, className }: SkillCardProps) {
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-4">
           <div className={cn(
-            "w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300",
+            "w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm",
             styles.iconBg,
-            "group-hover:scale-105 group-hover:shadow-md group-hover:shadow-gray-400/20 dark:group-hover:shadow-white/10"
+            "group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-gray-400/30 dark:group-hover:shadow-white/10 group-hover:rotate-3"
           )}>
-            <Icon className="w-6 h-6 text-gray-900 dark:text-white transition-transform duration-300 group-hover:scale-110" />
+            <i className={`${categoryIcon.icon} ${categoryIcon.color} text-2xl transition-all duration-300 group-hover:scale-110`}></i>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-all duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-100 group-hover:translate-x-1">
             {title}
