@@ -9,7 +9,7 @@ export function PresentationDescription({ description, className }: Presentation
   return (
     <p
       className={cn(
-        "mb-10 max-w-2xl text-lg text-white md:text-xl",
+        "mb-10 max-w-2xl text-lg text-gray-700 dark:text-white md:text-xl",
         className
       )}
     >

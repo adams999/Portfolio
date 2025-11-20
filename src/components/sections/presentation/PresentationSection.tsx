@@ -8,9 +8,34 @@ import { PresentationCTA } from "@/components/sections/presentation/Presentation
 import { PresentationImage } from "@/components/sections/presentation/PresentationImage";
 import { ArrowRight } from "lucide-react";
 import DarkVeil from "../ui-efects/DarkVeil";
+import { useEffect, useState } from "react";
 
 export function PresentationSection() {
   const t = useTranslations("presentation");
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+
+  useEffect(() => {
+    // Set initial theme based on document class
+    const isDark = document.documentElement.classList.contains('dark');
+    setTheme(isDark ? 'dark' : 'light');
+
+    // Create observer to watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const isDark = document.documentElement.classList.contains('dark');
+          setTheme(isDark ? 'dark' : 'light');
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const badge = {
     text: t("badge"),
@@ -42,7 +67,12 @@ export function PresentationSection() {
     <section className="relative pb-12 flex min-h-[80vh] flex-col justify-center overflow-hidden px-4 pt-7">
       {/* Lightning Background */}
       <div className="absolute inset-0 -z-20">
-        <DarkVeil speed={0.5} warpAmount={2} hueShift={35} />
+        <DarkVeil
+          speed={0.5}
+          warpAmount={2}
+          hueShift={theme === 'light' ? 15 : 35}
+          backgroundColor={theme === 'light' ? 'white' : 'black'}
+        />
       </div>
 
       <div className="container mx-auto max-w-6xl">
