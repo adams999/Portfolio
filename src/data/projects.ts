@@ -37,9 +37,9 @@ export const projects: Project[] = [
     link: "https://github.com/adams999/MCP-AI-to-send-emails",
   },
   {
-    id: "eslint-config",
-    tags: ["ESLint", "JavaScript", "TypeScript", "npm", "DevOps"],
-    link: "https://github.com/adams999/eslint-config",
+    id: "backend-dotnet9",
+    tags: [".NET 9", "PostgreSQL", "Entity Framework", "MediatR", "Clean Architecture", "MVC"],
+    link: "https://github.com/adams999/backend-dotnet9",
   },
   {
     id: "php-rest-api",

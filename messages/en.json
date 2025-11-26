@@ -70,9 +70,9 @@
         "title": "MCP AI Email Integration",
         "description": "Model Context Protocol tool that bridges AI systems with email functionality, enabling intelligent email automation based on business logic. Built with TypeScript for seamless AI integration."
       },
-      "eslint-config": {
-        "title": "ESLint Config Package",
-        "description": "Enterprise-grade ESLint configuration package published to npm for Strut Software and Rithm Software projects. Features modular configs for JavaScript, TypeScript, Angular, RxJS with composable inheritance."
+      "backend-dotnet9": {
+        "title": "RealEstate API - .NET 9",
+        "description": "Production-ready RESTful API for real estate management built with .NET 9. Implements Clean Architecture, CQRS pattern with MediatR, FluentValidation, structured logging with Serilog, and PostgreSQL. Includes 33 unit tests with 100% pass rate."
       },
       "php-rest-api": {
         "title": "PHP REST API with MySQL",
